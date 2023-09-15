@@ -1,8 +1,12 @@
  const mongoose = require('mongoose');
 
  mongoose.set('strictQuery', true);
+ try{
  mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api');
-
+ }
+ catch(e){
+    console.log(e);
+ }
 //  const me = new User({
 //     name:'Tom  ',
 //     email:'Tom@gmail.com  ',
